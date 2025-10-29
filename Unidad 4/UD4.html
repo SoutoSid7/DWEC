@@ -6,6 +6,9 @@
     <title>Unidad 4</title>
 </head>
 <body>
+    <h1>Modelo de eventos de W3C</h1>
+    <h3 id="w3c">Modelo W3C</h3>
+    <h3 id="w3canonima">Modelo W3C con funciones anonimas</h3>
     <script>
         const objetoCompleto = document.documentElement;
         const objetoCabecera = objetoCompleto.firstChild;
@@ -18,6 +21,15 @@
         console.log(tipoNodo);
         tipoNodo = document.documentElement.nodeType;
         console.log(tipoNodo); 
+        
+        //EJEMPLO 2
+        const saludarUnaVez = () => alert("Hola Mundo");
+        const w3c1 = document.getElementById("w3c");
+        const colorear = () => 
+            (document.getElementById("w3c").style.color = "red");
+
+        w3c1.addEventListener("click", colorear, false);
+        w3c1.addEventListener("click", saludarUnaVez, false);
     </script>
 </body>
 </html>
