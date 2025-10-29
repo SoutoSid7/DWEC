@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act3_1_5_Mario_Souto</title>
+</head>
+<body>
+    <script>
+        let numeros = [];
+        let factoriales = [];
+
+        function factorial(n){
+            if( n === 0 || n === 1) return 1;
+            return n * factorial(n-1);
+        }
+
+        for (let i = 1; i<=25; i++){
+            document.write(`${i}! = ${factorial(i)} <br>`)
+        }
+    </script>
+</body>
+</html>

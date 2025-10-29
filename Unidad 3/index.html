@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Ejemplo 0
+    console.log(typeof "abc"); // string (primitivo)
+    console.log(String ("abc")); // string
+    console.log(new String("abc")); // object
+    console.log(typeof(new String("abc")).valueOf()); // string
+
+// Ejemplo 1
+    function ejemplo(){
+        var z = 0;
+        while(z < 9){
+            console.log("Estoy en la iteracion ", z);
+            var x = 120;
+            z++;
+        }
+        console.log(x);
+    }
+    ejemplo();
+
+// Ejemplo 2
+    function ejemplo2(){
+        const libs = ['React', 'Angular', 'Vue'];
+        let cadena = `Este curso trata de ${libs[0]} <br>`;
+        document.write(cadena);
+    }
+    ejemplo2();
+
+// Ejemplo 3
+    function ejemplo3(){
+        const libs = ['React', 'Angular', 'Vue'];
+        const l = libs.length;
+        let cadena = `
+            ${l > 1 ? `Estas ${l} bibliotecas` : "Esta bibliotecas"}:
+            ${libs.join(", ")}
+        `;
+        document.write(cadena);
+    }
+    ejemplo3();
+
+// Ejemplo 4
+    function ejemplo4(){
+        let b = true;
+        if(b) console.log("Es verdadero");
+        else console.log("Es falso");
+    }
+    ejemplo4();
+
+// Ejemplo 5
+    function ejemplo5(){
+        let nota;
+        nota = prompt('Introduce una nota: ', '');
+        nota = parseInt(nota);
+        if (nota >= 9){
+            alert ('Sobresaliente');
+        }
+    }
+    ejemplo5();
+
+// Ejemplo 6
+    class Saludador{
+        nombre = "Sin nombre";
+        static palabraSaludo = "Hola";
+        constructor(nombre){
+            this.nombre= nombr ? nombre : this.nombre;
+        }
+
+        saludo(){
+            return `${Saludador.palabraSaludo}, soy ${this.nombre}`;
+        }
+    }
+    let s = new Saludador(); // Saludo sin Nombre
+    console.log(s.saludo());
+
+    s = new Saludador('Diego');
+    console.log(s);
+</script>
+</body>
+</html>

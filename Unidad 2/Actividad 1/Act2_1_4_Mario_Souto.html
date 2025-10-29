@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function nombre_edad(){
+            let nombre, edad, dias;
+
+            nombre = prompt('Introduce tu nombre: ', '');
+
+            edad = prompt('Introduce tu edad: ', '');
+            edad = parseInt(edad);
+
+            dias = edad * 365;
+            alert(`${nombre} el total de dias que has vivido son ${dias}`)
+            
+        }  
+        nombre_edad();
+    </script>
+</body>
+</html>

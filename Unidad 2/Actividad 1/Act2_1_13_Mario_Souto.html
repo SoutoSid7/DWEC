@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let precio, precioIva, iva;
+
+        precio = prompt("Introduzca el precio sin IVA: ");
+        precio = parseFloat(precio);
+        iva = prompt("Introduzca el IVA a aplicar: ");
+        iva = parseFloat(iva);
+        
+        precioIva = precio + (precio * iva/100);
+        alert("El precio con el IVA añadido es " + precioIva)
+    </script>
+</body>
+</html>

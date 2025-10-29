@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act3_1_3_Mario_Souto</title>
+</head>
+<body>
+    <script>
+        function mayor(){
+            let mayor = 0;
+            for(let i = 0; i < 3; i++){
+                let res = prompt("Introduzca el numero:");
+                let num = parseInt(res);
+                if(num > mayor){
+                    mayor = num;
+                }
+            }
+            document.write(`El numero mayor es ${mayor}`);
+        }
+        mayor();
+    </script>
+</body>
+</html>
