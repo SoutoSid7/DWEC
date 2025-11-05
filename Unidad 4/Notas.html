@@ -28,9 +28,43 @@
         }
         setEstado(
             JSON.parse(localStorage.getItem("Notas")) || {
-                notas: {"lista de la compra" : "Zanahorias\nTomates"},
+                notas: {"Lista de la compra": "Zanahorias\nTomates"},
                 seleccionada: "Lista de la compra"
         })
+
+        cbTitulos.addEventListener("change", () =>{
+            setEstado({otas: estado.notas, seleccionada: cbTitulos.value})
+        });
+
+        txtNota.addEventListener("change", () =>{
+            setEstado(
+                {
+                    notas: Object.assign({}, estado.notas, {
+                        [estado.seleccionada]: txtNota.value
+                    }),
+                        seleccionada: estado.seleccionada
+                }
+            )
+        })
+
+        document.querySelector("button").addEventListener("click",
+            () => {
+                let nombre = prompt("Nombre de Nota")
+                if(nombre) setEstado(
+                    {
+                        notas: Object.assign(
+                            {},
+                            estado.notas,
+                            {
+                                [nombre]: ""
+                            }
+                        ),
+                        seleccionada: nombre,
+                    }
+                )
+            }
+        )
+
     </script>
 </body>
 </html>
