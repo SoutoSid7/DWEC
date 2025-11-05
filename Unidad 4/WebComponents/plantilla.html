@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./titulos.js"></script>
+</head>
+<body>
+    <template id="plnatilla-tarjeta">
+        <p><span class="titulo"></span>: <span class="subtitulo"></span></p>
+    </template>
+
+    <div id="tarjeta-titulos"></div>
+
+    <script>
+        const fragmento = document.getElementById("plantilla-tarjeta")
+        titulos.forEach((t) => {
+            const instancia = document.importNode(fragmento.content, true)
+            instancia.querySelector(".titulo").innerHtml = t.titulo;
+            instancia.querySelector(".subtitulo").innerHtml = t.subtitulo;
+        })
+    </script>
+</body>
+</html>
