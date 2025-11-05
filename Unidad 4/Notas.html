@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select></select>
+    <button>Añadir Notas</button><br/>
+    <textarea style="width: 100%"></textarea>
+    <script>
+        const cbTitulos = document.querySelector("select");
+        const txtNota = document.querySelector("textarea");
+        let estado;
+        const setEstado = (nuevoEstado) => {
+            cbTitulos.textContent = "";
+            Object.keys(nuevoEstado.notas).forEach((nombre) => {
+                const opcion = document.createElement("option");
+                opcion.textContent = nombre;
+                if(nuevoEstado.seleccionada == nombre) opcion.selected = true;
+                cbTitulos.appendChild(opcion);
+            })
+            txtNota.value = nuevoEstado.notas[nuevoEstado.seleccionada];
+
+            localStorage.setItem("Notas", JSON.stringify(nuevoEstado));
+            estado = nuevoEstado;
+        }
+        setEstado(
+            JSON.parse(localStorage.getItem("Notas")) || {
+                notas: {"lista de la compra" : "Zanahorias\nTomates"},
+                seleccionada: "Lista de la compra"
+        })
+    </script>
+</body>
+</html>
