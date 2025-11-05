@@ -7,7 +7,7 @@
     <script src="./titulos.js"></script>
 </head>
 <body>
-    <template id="plnatilla-tarjeta">
+    <template id="plantilla-tarjeta">
         <p><span class="titulo"></span>: <span class="subtitulo"></span></p>
     </template>
 
@@ -17,8 +17,9 @@
         const fragmento = document.getElementById("plantilla-tarjeta")
         titulos.forEach((t) => {
             const instancia = document.importNode(fragmento.content, true)
-            instancia.querySelector(".titulo").innerHtml = t.titulo;
-            instancia.querySelector(".subtitulo").innerHtml = t.subtitulo;
+            instancia.querySelector(".titulo").innerHTML = t.titulo;
+            instancia.querySelector(".subtitulo").innerHTML = t.subtitulo;
+            document.getElementById("tarjeta-titulos").appendChild(instancia);
         })
     </script>
 </body>
