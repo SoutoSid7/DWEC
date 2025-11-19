@@ -1,0 +1,76 @@
+/* Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal donde van las 3 columnas */
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;                 /* separación entre columnas */
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Cada columna */
+.gallo, .corzo, .oso {
+    border: 2px solid;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1; /*que las 3 columnas ocupen mismo ancho*/
+    text-align: justify;
+}
+
+h3 {
+    text-align: center;
+}
+
+.gallo img, .corzo img, .oso img {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* BREAKPOINT */
+@media screen and (max-width: 576px) {
+    .container {
+        background-color: orange;
+    }
+    .gallo, 
+    .corzo,
+    .oso {
+        border-color: blue;
+    }
+    
+    main {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 577px) {
+
+    .container {
+        background-color: #327c99;
+    }
+
+    main {
+        flex-wrap: wrap; /* permite pasar a 2 filas */
+    }
+
+    .gallo,
+    .corzo {
+        flex: 0 0 calc(50% - 20px); /* dos columnas */
+    }
+
+    .oso {
+        flex: 0 0 100%; /* toda la anchura */
+    }
+}
+
+
