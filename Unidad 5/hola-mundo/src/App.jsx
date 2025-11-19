@@ -5,7 +5,11 @@ import AcercaDe from './components/AcercaDe'
 import './App.css'
 
 function App() {
-  return <AcercaDe></AcercaDe>
+  return (
+    <>
+    <AcercaDe />
+    </>
+  ) 
 }
 
 export default App

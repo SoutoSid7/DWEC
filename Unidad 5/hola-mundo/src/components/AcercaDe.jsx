@@ -11,3 +11,11 @@ const AcercaDe = () => {
     )
 };
 export default AcercaDe;
+
+const AdiosMundo = () => {
+    return(
+        <>
+            <h2>Adios, mundo</h2>
+        </>
+    )
+}
