@@ -4,8 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generos</title>
+
 </head>
 <body>
-    
+    <h1>Generos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody id="tablaGeneros">
+
+        </tbody>
+    </table>
+
+    <form id="formGeneros">
+        <label for="textID">ID</label>
+        <input type="text" id="textID" readonly>
+        <br><br>
+        <label for="nomber">Nombre</label>
+        <input type="text" id="nombre" maxlength="100">
+
+        <br><br>
+        <button type="button" id="btnAlta">Dar Alta</button>
+        <button type="button" id="btnBaja">Dar Baja</button>
+        <button type="button" id="btnMod">Modificar</button>
+    </form>
+
+    <script type="module" src="./js/generos.js"></script>
 </body>
 </html>
